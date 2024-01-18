@@ -1,0 +1,20 @@
+pt: 
+  activerecord:
+    models:
+      admin:
+        one: Administardor
+        other: Administardores
+      user:
+        one: Perfil
+        other: Perfis
+    attributes:
+      admin:
+        email: "E-mail"
+        password: "Senha"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+      user:
+        email: "E-mail"
+        password: "Senha"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"

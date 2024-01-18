@@ -1,0 +1,8 @@
+{
+  "name": "time_to_answer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/SoaresVini/time_to_answer.git",
+  "author": "Vini <vinicius.soares@joinin.com.br>",
+  "license": "MIT"
+}
