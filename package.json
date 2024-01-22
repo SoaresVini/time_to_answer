@@ -4,5 +4,12 @@
   "main": "index.js",
   "repository": "https://github.com/SoaresVini/time_to_answer.git",
   "author": "Vini <vinicius.soares@joinin.com.br>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "3.3.7",
+    "font-awesome": "^4.7.0",
+    "fontawesome-free": "^1.0.4",
+    "jquery": "3.3.1",
+    "jquery-easing": "^0.0.1"
+  }
 }
