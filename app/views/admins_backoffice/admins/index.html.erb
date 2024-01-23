@@ -5,7 +5,7 @@
       <th>#</th>
       <th>Email</th>
       <th>
-        <%= link_to '', "", class: 'btn btn-success btn-circle' %>
+        <%= link_to '', new_admins_backoffice_admin_path, class: 'btn btn-success btn-circle' %>
       </th>
     </tr>
   </thead>
@@ -16,9 +16,13 @@
       <td><%= admin.email %></td>
       <td class="list__actions">
         <%= link_to '', edit_admins_backoffice_admin_path(admin), class: 'btn btn-primary btn-circle' %>
-        <!--  link_to '', rota, class: 'btn btn-danger btn-circle'-->
+        <%= button_to '', admins_backoffice_admin_path(admin), method: :delete, class: 'btn btn-danger btn-circle' %>
       </td>
     </tr>
     <%end%>
   </tbody>
+
 </table>
+<div class="text-center">
+ <%= paginate @admins %>
+ </div>

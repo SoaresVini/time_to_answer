@@ -1,0 +1,28 @@
+<h1>Listando Assuntos/Áreas</h1>
+<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Descrição</th>
+      <th>
+        <%= link_to '', new_admins_backoffice_subject_path, class: 'btn btn-success btn-circle' %>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @subjects.each do |subject|%>
+    <tr>
+      <td><%= subject.id %></td>
+      <td><%= subject.description %></td>
+      <td class="list__actions">
+        <%= link_to '', edit_admins_backoffice_subject_path(subject), class: 'btn btn-primary btn-circle' %>
+        <%= button_to '', admins_backoffice_subject_path(subject), method: :delete, class: 'btn btn-danger btn-circle' %>
+      </td>
+    </tr>
+    <%end%>
+  </tbody>
+
+</table>
+<div class="text-center">
+ <%= paginate @subjects %>
+ </div>

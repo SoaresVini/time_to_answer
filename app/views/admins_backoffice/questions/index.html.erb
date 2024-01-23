@@ -1,0 +1,31 @@
+<h1>Listando Perguntas</h1>
+<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Assuntos/Areas</th>
+      <th>Descrição</th>
+      <th>
+        <%= link_to '', new_admins_backoffice_question_path, class: 'btn btn-success btn-circle' %>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @questions.each do |question|%>
+    <tr>
+      <td><%= question.id %></td>
+      <td><%= question.description.truncate(50) %></td>
+      <td><%= question.subject.description %></td>
+      
+      <td class="list__actions">
+        <%= link_to '', edit_admins_backoffice_question_path(question), class: 'btn btn-primary btn-circle' %>
+        <%= button_to '', admins_backoffice_question_path(question), method: :delete, class: 'btn btn-danger btn-circle' %>
+      </td>
+    </tr>
+    <%end%>
+  </tbody>
+
+</table>
+<div class="text-center">
+ <%= paginate @questions %>
+ </div>
