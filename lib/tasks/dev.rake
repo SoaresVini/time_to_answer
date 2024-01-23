@@ -62,15 +62,44 @@ desc "Adicionando perguntas e respostas"
 task add_answers_and_questions: :environment do 
   Subject.all.each do |subject|
     rand(5...10).times do |i|
-      Question.create!(
-        description: "#{Faker::Lorem.paragraph} #{Faker::Lorem.question}",
-        subject: subject
-      )
+      params = create_question_params(subject)
+      answers_attributes = params[:question][:answers_attributes]
+
+      add_answers(answers_attributes)
+      elect_true_answer(answers_attributes)
+
+      Question.create!(params[:question])
     end
   end
 end
 
 private 
+
+def elect_true_answer(answers_attributes = [])
+  select_answer = rand(answers_attributes.size)
+  answers_attributes[select_answer] = create_answer_params(true)
+end
+
+def add_answers(answers_attributes = [])
+  rand(2..5).times.each do |j|
+    answers_attributes.push(
+      create_answer_params()
+    )
+  end
+end
+
+def create_answer_params(correct = false)
+  { description: Faker::Lorem.sentence, correct: correct }
+end
+
+def create_question_params(subject = Subject.all.sample)
+  { question: {
+      description: "#{Faker::Lorem.paragraph} #{Faker::Lorem.question}",
+      subject: subject,
+      answers_attributes: []
+    }
+  }
+end
 
 def show_spinner(msg_start, msg_end = "Sucesso!!")
   spinner = TTY::Spinner.new("[:spinner] #{msg_start}")

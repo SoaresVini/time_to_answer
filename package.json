@@ -6,11 +6,12 @@
   "author": "Vini <vinicius.soares@joinin.com.br>",
   "license": "MIT",
   "dependencies": {
+    "@nathanvda/cocoon": "^1.2.14",
     "bootstrap": "3.3.7",
     "bootstrap-growl-ifightcrime": "^1.1.0",
     "font-awesome": "^4.7.0",
     "fontawesome-free": "^1.0.4",
-    "jquery": "3.3.1",
+    "jquery": "^3.7.1",
     "jquery-easing": "^0.0.1"
   }
 }

@@ -23,6 +23,7 @@ gem "turbo-rails"
 
 gem 'kaminari'
 gem 'kaminari-i18n'
+gem "cocoon"
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"

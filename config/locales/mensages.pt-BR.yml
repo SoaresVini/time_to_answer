@@ -1,0 +1,6 @@
+pt: 
+  message:
+    listing: Listando %{model}
+    new: Criando %{model}
+    edit: Editando %{model}
+    save: Salvar

@@ -1,10 +1,10 @@
-<h1>Listando Perguntas</h1>
+<h1><%= t('message.listing', model: @questions.model_name.human(count: @questions.size)) %></h1>
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
   <thead>
     <tr>
       <th>#</th>
-      <th>Assuntos/Areas</th>
-      <th>Descrição</th>
+      <th><%= translate(@questions, :description)%></th>
+      <th><%= translate(@questions, :subject)%></th>
       <th>
         <%= link_to '', new_admins_backoffice_question_path, class: 'btn btn-success btn-circle' %>
       </th>

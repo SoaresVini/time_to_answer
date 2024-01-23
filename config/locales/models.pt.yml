@@ -1,21 +1,52 @@
-pt: 
+pt:
   activerecord:
     models:
       admin:
-        one: Administardor
-        other: Administardores
+        one: Administrador
+        other: Administradores
       user:
-        one: Perfil
-        other: Perfis
+        one: Usuário
+        other: Usuários
+      subject:
+        one: Assunto
+        other: Assuntos
+      question:
+        one: Pergunta
+        other: Perguntas
     attributes:
       admin:
-        email: "E-mail"
-        password: "Senha"
-        password_confirmation: "Confirmação de Senha"
-        created_at: "Criado em"
-        updated_at: "Atualizado em"
+        id: Código
+        email: Email
+        password: Senha
+        password_confirmation: Confirmação da Senha
+        created_at: Criado em
+        updated_at: Atualizado em
       user:
-        email: "E-mail"
-        password: "Senha"
-        created_at: "Criado em"
-        updated_at: "Atualizado em"
+        id: Código
+        email: Email
+        first_name: Nome
+        last_name: Sobrenome
+        password: Senha
+        password_confirmation: Confirmação da Senha
+        created_at: Criado em
+        updated_at: Atualizado em
+      user_profile:
+        id: Código
+        address: Endereço
+        zip_code: CEP
+        gender: Sexo
+        birthdate: Data de Nascimento
+        created_at: Criado em
+        updated_at: Atualizado em
+      subject:
+        id: Código
+        description: Descrição
+        created_at: Criado em
+        updated_at: Atualizado em
+      question:
+        id: Código
+        description: Descrição
+        subject: Assunto
+        subject_id: Assunto
+        created_at: Criado em
+        updated_at: Atualizado em

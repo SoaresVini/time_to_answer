@@ -4,8 +4,8 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
   #Usar o before_action quando uma ação depende do metodo e assim vc n precisa chamar o metodo na propria ação 
 
   def index
-    @admins = Admin.all .page params[:page]
-    end
+    @admins = Admin.all.page params[:page]
+  end
    
 
   def new 

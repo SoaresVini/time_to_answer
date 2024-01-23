@@ -1,9 +1,9 @@
-<h1>Listando Assuntos/Áreas</h1>
+<h1><%= t('message.listing', model: @subjects.model_name.human(count: @subjects.size)) %></h1>
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
   <thead>
     <tr>
       <th>#</th>
-      <th>Descrição</th>
+      <th><%= translate(@subjects, :description)%></th>
       <th>
         <%= link_to '', new_admins_backoffice_subject_path, class: 'btn btn-success btn-circle' %>
       </th>
